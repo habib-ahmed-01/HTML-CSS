@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loco.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <title>Document</title>
 </head>
 <body>
+    <div id="minicircle"></div>
     <div id="main">
         
         <!-- First Landing -->
@@ -22,16 +25,27 @@
             </div>
             <!-- Page Text -->
             <div id="heading">
-                <h1>PRODUCT</h1>
+                <div class="bounding">
+                    <h1 class="boundingelem">PRODUCT</h1>
+                </div>
                 <div class="blocktext">
-                    <h1 id="secondh1">DESIGNER</h1>
-                    <h5>Based in Toronto</h5>
+                    <div class="bounding">
+                        <h1 id="secondh1" class="boundingelem">DESIGNER</h1>
+                    </div>
+                    <div class="bounding">
+                        <h5 class="boundingelem">Based in Toronto</h5>
+                    </div>
+                    
                 </div>
             </div>
 
             <div id="smallheading">
-                <h5>available for freelance</h5>
-                <h5>work from may 23'</h5>
+                <div class="bounding">
+                    <h5 class="boundingelem">available for freelance</h5>
+                </div>
+                <div class="bounding">
+                    <h5 class="boundingelem">work from may 23'</h5>
+                </div>
             </div>
 
             <div id="herofooter">
@@ -97,5 +111,8 @@
         </div>
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
