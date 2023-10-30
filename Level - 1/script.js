@@ -30,6 +30,7 @@ function circleSkew(){
 
 function circleMouseFollower(xscale, yscale){
     window.addEventListener("mousemove", function(dets){
+        document.querySelector("#minicircle").style.opacity = `1`;
         document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
     })
 }
@@ -58,6 +59,34 @@ function firstPageAnim(){
         ease: Expo.easeInOut 
       })
 }
+
+document.querySelectorAll(".elem").forEach(function(elem){
+    var rotate = 0;
+    var xdiff = 0;
+
+    elem.addEventListener("mouseleave", function(dets){
+        gsap.to(elem.querySelector("img"), {
+            opacity: 0,
+            ease: Power1,
+            duration: 0.5,
+        })
+    })
+
+    elem.addEventListener("mousemove", function(dets){
+        var diff = dets.clientY - elem.getBoundingClientRect().top;
+        xdiff = gsap.utils.clamp(-20, 20, dets.clientX - rotate);
+        rotate = dets.clientX;
+
+        gsap.to(elem.querySelector("img"), {
+            opacity: 1,
+            ease: Power1,
+            top: diff,
+            left: dets.clientX,
+            rotate: xdiff
+        })
+        
+    })
+})
 
 circleMouseFollower();
 firstPageAnim();
